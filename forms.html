@@ -46,7 +46,14 @@ Phone:<br>
 
 </html>
 <script>
-    
+
+    window.addEventListener("DOMContentLoaded",()=>{
+        axios.get("https://crudcrud.com/api/4bbaa49418784b3694a423377fd59eba/Userdata").
+    then((res)=>document.body.innerHTML=document.body.innerHTML+JSON.stringify(res.data)).
+    catch((res)=>document.body.innerHTML=document.body.innerHTML+"somethingWENT wrong");
+
+    })
+  
     
 var x = document.getElementById("form");
 var y = document.getElementById("but");
@@ -92,15 +99,13 @@ axios.post("https://crudcrud.com/api/4bbaa49418784b3694a423377fd59eba/Userdata",
  
 
  
-
-
- 
  
 }
 
 
 
 </script>
+
 
 
 
